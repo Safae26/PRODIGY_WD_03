@@ -1,0 +1,83 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body {
+    background-color: #170f36;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #fff;
+}
+
+h1 {
+    font-size: 35px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 1);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.board {
+    display: grid;
+    /* 
+    the grid has 3 equal-width columns, 
+    and each column has a width of 100 pixels
+    */
+    grid-template-columns: repeat(3, 100px);
+    /* spacing between grid items */
+    grid-gap: 5px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5b2d86;
+    font-size: 36px;
+    cursor: pointer;
+    border: 2px solid #341458;
+    transition: background-color 0.3s;
+}
+
+.cell:hover {
+    background-color: #7d3a9c;
+}
+
+.cell:active {
+    /* scaling up */
+    transform: scale(1.05);
+}
+
+.cell.winner {
+    background-color: #00c4cc;
+    color: #170f36;
+    font-weight: bold;
+}
+
+#message {
+    font-size: 24px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+#reset {
+    background-color: #5b2d86;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#reset:hover {
+    background-color: #7d3a9c;
+}
